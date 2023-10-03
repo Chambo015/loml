@@ -24,10 +24,10 @@ const formatSegment = (segment: number): string => {
 const nowDate = ref<Date>(new Date())
 const timeDiff = computed(() => Math.abs(nowDate.value.getTime() - new Date(props.date).getTime()))
 const getTime = computed(() => {
-    const days = Math.ceil(timeDiff.value / (1000 * 3600 * 24)),
-        hours = Math.ceil(timeDiff.value / (1000 * 3600)) % 24,
-        minutes = Math.ceil(timeDiff.value / (1000 * 60)) % 60,
-        seconds = Math.ceil(timeDiff.value / 1000) % 60
+    const days = Math.floor(timeDiff.value / (1000 * 3600 * 24)),
+        hours = Math.floor(timeDiff.value / (1000 * 3600)) % 24,
+        minutes = Math.floor(timeDiff.value / (1000 * 60)) % 60,
+        seconds = Math.floor(timeDiff.value / 1000) % 60
     console.log(`${formatSegment(days)}:${formatSegment(hours)}:${formatSegment(minutes)}:${formatSegment(seconds)}`.split(''));
     return `${formatSegment(days)}:${formatSegment(hours)}:${formatSegment(minutes)}:${formatSegment(seconds)}`.split('')
 })
