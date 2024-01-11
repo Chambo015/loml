@@ -10,6 +10,8 @@
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import TimerChar from './TimerChar.vue'
 
+const images = ['https://sun9-30.userapi.com/impg/NVnWqKYXENu9zIgnkCG4sa58XDkReCfGvn8tqA/zIn0vVXphT8.jpg?size=1800x1200&quality=96&sign=d906c99c65633807aa1430adde7e9058&type=album', ]
+
 const props = defineProps({
     date: {
         type: String,

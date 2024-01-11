@@ -4,6 +4,11 @@
   @return rgb($color, $color, $color);
 }
 
+html {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
 body{
   background-color: gray(30);
   margin: 0px;
@@ -25,14 +30,19 @@ body{
   height: 100vh;
   justify-content: center;
   width: 100vw;
+  position: relative;
   
   #timer {
-    background: linear-gradient(to bottom right, rgba(2, 99, 225, 1.0), rgba(235, 24, 54, 1.0));
+    background: linear-gradient(to bottom right, rgba(2, 99, 225, 1.0), rgb(24, 28, 235));
     border-radius: 22px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
     
     #timer-text {
       align-items: center;
-      background-color: gray(30);
+      background-color: rgba(30,30,30,0.5);
       border-radius: 20px;      
       display: flex;
       margin: 4px;
