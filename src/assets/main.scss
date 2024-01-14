@@ -35,10 +35,6 @@ body{
   #timer {
     background: linear-gradient(to bottom right, rgba(2, 99, 225, 1.0), rgb(24, 28, 235));
     border-radius: 22px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
     
     #timer-text {
       align-items: center;
@@ -89,7 +85,7 @@ body{
   }
 }
 
-@media(max-width: 800px) {
+@media(max-width: 1000px) {
   #app {
     #timer {
       border-radius: 16px;
@@ -128,7 +124,7 @@ body{
   }
 }
 
-@media(max-width: 400px) {
+@media(max-width: 500px) {
   #app {
     #timer {
       border-radius: 8px;
