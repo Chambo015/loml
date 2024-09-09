@@ -1,7 +1,7 @@
 <template>
     <div id="timer">
         <div class="buttons">
-            <button v-for="(d, idx) of dates" :key="d.date" :class="['btn', idx === currentDateId && 'active']" @click="() => currentDateId = idx" >
+            <button v-for="(d, idx) of dates" :key="d.date" :class="['btn', idx === currentDateId && 'active']" @click="() => currentDateId = idx" :title="d.label" >
                 {{ d.title }}
             </button>
         </div>
